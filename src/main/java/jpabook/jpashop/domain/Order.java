@@ -16,7 +16,7 @@ public class Order extends BaseEntity {
     private Long id;
 
     @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "MENBER_ID")
+    @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
     @OneToOne(fetch = LAZY, cascade = CascadeType.ALL)
