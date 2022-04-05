@@ -19,6 +19,13 @@ public class JpaMain {
         tx.begin();
 
         try {
+            Book book = new Book();
+            book.setName("JPA");
+            book.setAuthor("김영한");
+
+            em.persist(book);
+
+            em.createQuery("select i from Item i where type(i) = Book", Item.class);
 
 
             tx.commit();
